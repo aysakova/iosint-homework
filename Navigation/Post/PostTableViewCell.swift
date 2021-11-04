@@ -3,8 +3,6 @@
 //  Navigation
 //
 //  Created by Aysa Minkova on 2021/08/19.
-//  Copyright © 2021 Artem Novichkov. All rights reserved.
-//
 
 import UIKit
 import StorageService
@@ -14,7 +12,7 @@ class PostTableViewCell: UITableViewCell {
     var post: Post? {
         didSet {
             authorLabel.text = post?.author
-            postImageView.image = UIImage(named: post!.image)
+            postImageView.image = post!.image
             descriptionLabel.text = post?.description
             likesLabel.text = String("Likes: \(Int(post!.likes))")
             viewsLabel.text = String("Views: \(Int(post!.views))")
