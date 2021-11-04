@@ -14,7 +14,7 @@ class PostTableViewCell: UITableViewCell {
     var post: Post? {
         didSet {
             authorLabel.text = post?.author
-            postImageView.image = UIImage(named: post!.image)
+            postImageView.image = post!.image
             descriptionLabel.text = post?.description
             likesLabel.text = String("Likes: \(Int(post!.likes))")
             viewsLabel.text = String("Views: \(Int(post!.views))")
