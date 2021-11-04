@@ -3,8 +3,6 @@
 //  Navigation
 //
 //  Created by Aysa Minkova on 2021/08/19.
-//  Copyright © 2021 Artem Novichkov. All rights reserved.
-//
 
 import UIKit
 import StorageService
