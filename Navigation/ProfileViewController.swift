@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import StorageService
 
 class ProfileVIewController: UIViewController {
     
@@ -32,7 +33,11 @@ class ProfileVIewController: UIViewController {
         myTableView.register(PhotosTableViewCell.self, forCellReuseIdentifier: String(describing: PhotosTableViewCell.self))
         myTableView.delegate = self
 
-        view.backgroundColor = .systemGray6
+        #if DEBUG
+            view.backgroundColor = .systemRed
+        #elseif RELEASE
+            view.backgroundColor = .systemBlue
+        #endif
         
         setupTableView()
     }
@@ -58,6 +63,7 @@ extension ProfileVIewController {
         view.addSubview(myTableView)
         myTableView.translatesAutoresizingMaskIntoConstraints = false
         myTableView.rowHeight = UITableView.automaticDimension
+        myTableView.sectionHeaderTopPadding = 0
         
         NSLayoutConstraint.activate([
                 
