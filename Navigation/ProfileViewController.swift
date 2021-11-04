@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import StorageService
 
 class ProfileVIewController: UIViewController {
     

@@ -22,22 +22,10 @@ final class FeedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        view.addSubview(buttonsStackView)
-       
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-//        setConstraints()
     }
     
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard segue.identifier == "post" else {
-//            return
-//        }
-//        guard let postViewController = segue.destination as? PostViewController else {
-//            return
-//        }
-//    }
 }
