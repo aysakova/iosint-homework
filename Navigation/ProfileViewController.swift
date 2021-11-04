@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import StorageService
+import SnapKit
 
 class ProfileVIewController: UIViewController {
     
@@ -65,14 +66,9 @@ extension ProfileVIewController {
         myTableView.rowHeight = UITableView.automaticDimension
         myTableView.sectionHeaderTopPadding = 0
         
-        NSLayoutConstraint.activate([
-                
-            myTableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            myTableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            myTableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            myTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            
-        ])
+        myTableView.snp.makeConstraints { make in
+            make.edges.equalTo(self.view.safeAreaLayoutGuide)
+        }
     }
 }
 
